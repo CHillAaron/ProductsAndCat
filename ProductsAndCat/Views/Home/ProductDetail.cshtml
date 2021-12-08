@@ -1,0 +1,19 @@
+﻿
+@{
+}
+
+<h1 class="text-center">@ViewBag.ProductName</h1>
+
+<div class="d-flex justify-content-around">
+    <div>
+        <h1>Categories:</h1>
+        <ul>
+            @foreach(var c in ViewBag.show.AllCategories)
+            {
+            <li>@c.ListOfCategories.CategoryName</li>
+            }
+        </ul>
+        
+    </div>
+    <partial name="_AddCategory" />
+</div>

@@ -1,0 +1,16 @@
+﻿@model ProdAndCat
+@{
+}
+
+<form action="/Add/TheProduct" method="post" class="col-5">
+    <div class="form-group">
+        <input hidden asp-for="CategoryId" value="@ViewBag.CategoryId" />
+        <select asp-for="ProductId" asp-items="@(new SelectList(ViewBag.UnassignedProducts, "ProductId", "ProductName"))">
+            <option value="" selected disabled>Pick one</option>
+        </select>
+         
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add Category to this product" class="btn btn-warning" />
+    </div>
+</form>

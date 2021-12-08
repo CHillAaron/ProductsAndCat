@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="text-center">@ViewBag.CategoryName</h1>
+
+<div class="d-flex justify-content-around">
+    <div>
+        <h1>Categories:</h1>
+        <ul>
+            @foreach (var c in ViewBag.show.allProducts)
+            {
+                <li>@c.ListOfProducts.ProductName</li>
+            }
+        </ul>
+
+    </div>
+    <partial name="_AddProduct" />
+</div>

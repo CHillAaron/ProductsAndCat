@@ -1,0 +1,24 @@
+﻿@model Category
+@{
+}
+
+
+<div class="d-flex justify-content-center text-center mb-4">
+    <a href="/" class="mr-2"><h1>Products</h1></a>
+    <a href="Category"><h1>Category</h1></a>
+</div>
+
+<div class="d-flex justify-content-around">
+    <div class="col-5">
+        <partial name="_CategoryForm" />
+    </div>
+    <div>
+        <ul>
+            @foreach (Category c in ViewBag.allCategories)
+            {
+                <li><a href="/CategoryDetail/@c.CategoryId">@c.CategoryName</a></li>
+            }
+        </ul>
+
+    </div>
+</div>

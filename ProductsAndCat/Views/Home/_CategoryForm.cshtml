@@ -1,0 +1,13 @@
+﻿@model Category
+@{
+}
+
+<form action="Create/Category" method="post" class="col-5">
+    <div>
+        <label asp-for="CategoryName"></label>
+        <input asp-for="CategoryName" class="form-control" />
+        <span class="text-danger" asp-validation-for="CategoryName"></span>
+    </div>
+    
+    <input type="submit" value="Create Product" class="btn btn-warning" />
+</form>

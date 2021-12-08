@@ -1,0 +1,25 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="d-flex justify-content-center text-center mb-4">
+    <a href="/" class="mr-2"><h1>Products</h1></a>
+    <a href="Category"><h1>Category</h1></a>
+</div>
+
+<div class="d-flex justify-content-around">
+    <div class="col-5">
+        <partial name="_ProductForm"/>
+    </div>
+    <div>
+        <ul>
+            @foreach (Product p in ViewBag.allProducts)
+            {
+                <li><a href="ProductDetail/@p.ProductId">@p.ProductName</a></li>
+            }
+        </ul>
+
+    </div>
+</div>
